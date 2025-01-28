@@ -1,0 +1,18 @@
+.navbar {
+    width: 100%;
+    padding: 16px 20px 16px 20px;
+    font-size: 18px;
+    border-bottom: 2px solid #2d3748;
+}
+
+/* Apply different padding for small screens (640px and up) */
+@media (min-width: 640px) {
+    .navbar {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+}
+
+.navbar p {
+    margin: 0;
+}

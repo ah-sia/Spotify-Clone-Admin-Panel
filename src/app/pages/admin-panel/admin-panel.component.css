@@ -1,0 +1,22 @@
+.admin-panel {
+    display: flex;
+    align-items: start;
+    min-height: 100vh;
+}
+
+.right-panel {
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #F3FFF7;
+    flex: 1 1 0%;
+}
+
+.song-info-area {
+    padding: 20px 0px 0px 32px;
+}
+
+@media (min-width: 640px) {
+    .song-info-area {
+      padding: 48px 0px 0px 48px;
+    }
+}

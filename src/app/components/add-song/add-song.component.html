@@ -1,0 +1,61 @@
+<form class="add-song-form" #userPost="ngForm" (ngSubmit)="addSongInfo()">
+    <div class="song-files">
+        <div class="files">
+            <p>Upload Song</p>
+            <input type="file" id="songPath" accept="audio/*" hidden
+            (change)="onSongChange($event)" />
+            <label class="song-file" for="songPath">
+                <img [src]="song ? assets.upload_added : assets.upload_song"/>
+            </label>
+        </div>
+
+        <div class="files">
+            <p>Upload Image</p>
+            <input type="file" id="imagePath" accept="image/*" hidden 
+             (change)="onImageChange($event)" />
+            <label class="song-file" for="imagePath">
+                <img [src]="image ? imageUrl : assets.upload_area"/>
+            </label>
+        </div>
+    </div>
+
+    <div class="song-input">
+        <p>Title</p>
+        <input class="input-box" placeholder='Type Here'
+        [(ngModel)]="songService.SongInfo.songTitle" 
+        name="songTitle"
+        required/>
+    </div>
+    
+    <div class="song-input">
+        <p>Album</p>
+        <input class="input-box" placeholder='Type Here' 
+        [(ngModel)]="songService.SongInfo.albumTitle"
+        name="albumTitle"
+        required/>
+    </div>
+
+    <div class="song-input">
+        <p>Artist</p>
+        <input class="input-box" placeholder='Type Here' 
+        [(ngModel)]="songService.SongInfo.artistName"
+        name="artist" required/>
+    </div>
+
+    <div class="song-input">
+        <p>Duration</p>
+        <input class="input-box" placeholder='Type Here' 
+        [(ngModel)]="songService.SongInfo.songDuration" 
+        name="duration"
+        required/>
+    </div>
+
+    <button type="submit" class="submit-button"
+    [disabled]="!songService.SongInfo.songTitle || !songService.SongInfo.artistName || !songService.SongInfo.albumTitle || !songService.SongInfo.songDuration"
+    >Submit</button>
+</form>
+
+<!-- hidden (change)="handleFileChange(event)" 
+ <label htmlFor="song">
+            <img [src]="song ? assets.upload_added : assets.upload_song" class="song-label" alt=""/>
+        </label>-->

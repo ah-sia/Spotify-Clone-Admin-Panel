@@ -1,0 +1,44 @@
+.add-song-form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+    color: #2d3748;
+}
+
+.song-files {
+    display: flex;
+    gap: 32px;
+}
+
+.files {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.song-file img {
+    width: 96px;
+    height: 96px;
+}
+
+.song-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-box {
+    width: max(40vw,250px);
+    border: #cbd5e0;
+    padding: 10px;
+    outline: #38a169;
+}
+
+.submit-button {
+    cursor: pointer;
+    background-color: black;
+    padding: 10px 56px 10px 56px;
+    color: white;
+    font-size: 1rem;
+}

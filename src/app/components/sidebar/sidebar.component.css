@@ -1,0 +1,39 @@
+.sidebar {
+    background-color: #003A10;
+    padding-left: 4vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: start;
+}
+
+.logo {
+    margin-top: 20px;
+    /* overflow: hidden; */
+    display: none;
+    width: max(10vw, 100px);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Apply different padding for small screens (640px and up) */
+
+.logo-small {
+    margin: 40px 40px 0px 0px;
+    display: block;
+    width: max(5vw, 40px);
+}
+
+@media (min-width: 640px) {
+    .logo {
+      display: block;
+    }
+}
+
+@media (min-width: 640px) {
+    .logo-small {
+      display: none;
+    }
+}
